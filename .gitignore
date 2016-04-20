@@ -8,6 +8,3 @@ Homestead.json
 .env
 vendor
 */vendor
-*/platforms/
-*/plugins/
-app/www/dist/
