@@ -1,0 +1,13 @@
+*/node_modules
+npm-debug.log
+.sass-cache
+.idea/
+.idea/*
+Homestead.yaml
+Homestead.json
+.env
+vendor
+*/vendor
+*/platforms/
+*/plugins/
+app/www/dist/
