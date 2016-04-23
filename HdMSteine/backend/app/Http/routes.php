@@ -29,3 +29,5 @@ Route::auth();
 Route::resource('api/post', 'PostController');
 
 Route::resource('api/user', 'UserController');
+
+Route::resource('api/message', 'MessageController');
