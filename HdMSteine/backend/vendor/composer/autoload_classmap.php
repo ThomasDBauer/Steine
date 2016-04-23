@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'CreateCommentsTable' => $baseDir . '/database/migrations/2016_04_23_021918_create_comments_table.php',
     'CreateDemandsTable' => $baseDir . '/database/migrations/2016_04_23_012013_create_demands_table.php',
+    'CreateMessagesTable' => $baseDir . '/database/migrations/2016_04_23_224623_create_messages_table.php',
     'CreateOffersTable' => $baseDir . '/database/migrations/2016_04_23_011942_create_offers_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2016_04_23_001126_create_posts_table.php',
@@ -86,6 +87,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+    'MessagesTableSeeder' => $baseDir . '/database/seeds/MessagesTableSeeder.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit_Extensions_GroupTestSuite' => $vendorDir . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
     'PHPUnit_Extensions_PhptTestCase' => $vendorDir . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',
