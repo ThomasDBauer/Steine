@@ -14,7 +14,7 @@ class CreateDemandsTable extends Migration
     {
         Schema::create('demands', function (Blueprint $table) {
 
-            $table->Integer('post_id');
+            $table->Integer('post_id')->unsigned();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $table->primary('post_id');
         });
