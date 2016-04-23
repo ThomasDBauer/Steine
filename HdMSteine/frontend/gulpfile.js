@@ -20,7 +20,8 @@ const imagemin = require('gulp-imagemin');
 var paths = {
     html: ['./*.html'],
 
-    sass: ['./src/scss/*.{scss,sass}'],
+    //sass: ['./src/scss/*.{scss,sass}'],
+    sass: ['./src/scss/style.scss'],
     css: ['./src/css/*.css', '!./src/css/*.min.css'],
     mincss: ['./src/css/*.min.css'],
 

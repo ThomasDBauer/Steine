@@ -1,0 +1,8 @@
+html body .container {
+  display: flex;
+  justify-content: center; }
+  html body .container .item {
+    flex: 1;
+    align-content: center; }
+    html body .container .item .login-box {
+      padding: 10px; }

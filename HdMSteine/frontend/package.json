@@ -33,6 +33,7 @@
     "gulp-uncss": "^1.0.4"
   },
   "dependencies": {
-    "angular": "^1.5.5"
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
   }
 }
