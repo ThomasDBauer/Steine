@@ -11,7 +11,6 @@ angular.module('steine', ['ngResource', 'ui.router', 'steine.controllers'])
     $stateProvider
         .state('app', {
             url: '/',
-            abstract: true,
             templateUrl: '../../src/www/index.html',
             controller: 'AppCtrl'
         })
