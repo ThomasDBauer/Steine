@@ -20,6 +20,11 @@ class MessageController extends Controller
         return Message::all();
     }
 
+    public function showMessages(){
+            $messages = Message::lists('message');
+            return view('message', compact('messages'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

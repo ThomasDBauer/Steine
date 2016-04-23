@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -20,9 +21,11 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/post', function(){
+Route::get('/posts', function(){
     return view('post');
 });
+
+Route::get('/messages', 'MessageController@showMessages');
 
 Route::auth();
 
