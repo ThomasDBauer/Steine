@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 var waehrung = angular.module('waehrung', ['ui.router', 'waehrung.controllers', 'waehrung.services']);
 
 waehrung
 .run();
+=======
+angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers'])
+
+.run(function () {
+    console.log('hi world')
+})
+
+>>>>>>> manu
 
 waehrung
     .config(function ($stateProvider, $urlRouterProvider) {
@@ -10,18 +19,16 @@ waehrung
     $stateProvider
         .state('app', {
             url: '/',
-            abstract: true,
-            templateUrl: '../www/app.html',
+            templateUrl: '../../src/www/index.html',
             controller: 'AppCtrl'
         })
 
-        .state('login', {
+        .state('app.login', {
             url: '/login',
-            template: '../www/login.html',
+            templateUrl: '../../src/www/login.html',
             controller: 'LoginCtrl'
     });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
-
 });
