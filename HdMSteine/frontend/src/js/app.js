@@ -1,6 +1,9 @@
-angular.module('waehrung', ['ui.router', 'waherung.controllers', 'waehrung.services'])
+angular.module('steine', ['ngResource', 'ui.router', 'steine.controllers'])
 
-.run()
+.run(function () {
+    console.log('hi world')
+})
+
 
 .config(function ($stateProvider, $urlRouterProvider) {
     // add config here
@@ -9,17 +12,16 @@ angular.module('waehrung', ['ui.router', 'waherung.controllers', 'waehrung.servi
         .state('app', {
             url: '/',
             abstract: true,
-            templateUrl: '../www/app.html',
+            templateUrl: '../../src/www/index.html',
             controller: 'AppCtrl'
         })
 
-        .state('login', {
+        .state('app.login', {
             url: '/login',
-            template: '../www/login.html',
+            templateUrl: '../../src/www/login.html',
             controller: 'LoginCtrl'
     });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
-
 });
