@@ -1,8 +1,10 @@
-angular.module('waehrung', ['ui.router', 'waherung.controllers', 'waehrung.services'])
+var waehrung = angular.module('waehrung', ['ui.router', 'waehrung.controllers', 'waehrung.services']);
 
-.run()
+waehrung
+.run();
 
-.config(function ($stateProvider, $urlRouterProvider) {
+waehrung
+    .config(function ($stateProvider, $urlRouterProvider) {
     // add config here
 
     $stateProvider
