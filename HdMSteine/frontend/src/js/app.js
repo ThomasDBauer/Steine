@@ -1,4 +1,4 @@
-angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers'])
+angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers', 'steine.services'])
 
     .run(function () {
     })
@@ -19,6 +19,18 @@ angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers']
                 templateUrl: '../../src/www/login.html',
                 controller: 'LoginCtrl'
                 // TODO: add resolve for api
+            })
+
+            .state('dashboard', {
+                url: '/dashboard',
+                templateUrl: '../../src/www/dashboard.html',
+                controller: 'DashboardCtrl',
+                // TODO: add resolve for api
+                resolve: {
+                    posts: function (PostsService) {
+                        return PostsService;
+                    }
+                }
             });
 
         // if none of the above states are matched, use this as the fallback

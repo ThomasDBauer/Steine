@@ -6,4 +6,8 @@ angular.module('steine.controllers', [])
     // TODO fix login ctrl and routing / ui view
     .controller('LoginCtrl', function ($scope) {
         $scope.username = "Heribert"
+    })
+
+    .controller('DashboardCtrl', function ($scope) {
+
     });
