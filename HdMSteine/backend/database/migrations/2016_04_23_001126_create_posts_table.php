@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->String('name');
             $table->String('description');
+            $table->String('status');
             $table->Integer('price');
 
             $table->Integer('user_id')->unsigned();

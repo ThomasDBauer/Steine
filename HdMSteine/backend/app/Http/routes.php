@@ -21,3 +21,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('api/post', 'PostController');
+
+Route::resource('api/user', 'UserController');
