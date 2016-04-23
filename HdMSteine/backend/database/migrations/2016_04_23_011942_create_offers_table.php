@@ -14,6 +14,7 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
 
+            $table->Integer('post_id');
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $table->primary('post_id');
 
