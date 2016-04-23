@@ -16,9 +16,15 @@ Route::get('/', function () {
     
 });
 
-Route::auth();
+
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/post', function(){
+    return view('post');
+});
+
+Route::auth();
 
 Route::resource('api/post', 'PostController');
 
