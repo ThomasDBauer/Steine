@@ -1,7 +1,6 @@
 angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers'])
 
     .run(function () {
-        console.log('hi world')
     })
     .config(function ($stateProvider, $urlRouterProvider) {
         // add config here
@@ -9,17 +8,19 @@ angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers']
         $stateProvider
             .state('app', {
                 url: '/',
-                templateUrl: 'huhuhu',
+                templateUrl: '../../src/www/index.html',
+                abstract: true,
                 controller: 'AppCtrl'
+                // TODO: add resolve for api
             })
 
             .state('login', {
                 url: '/login',
-                template: "<h1>hi!</h1>",
-                //templateUrl: '../../src/www/login.html',
+                templateUrl: '../../src/www/login.html',
                 controller: 'LoginCtrl'
-        });
+                // TODO: add resolve for api
+            });
 
         // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
     });
