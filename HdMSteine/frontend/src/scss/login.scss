@@ -1,0 +1,17 @@
+html {
+  body {
+    .container {
+      display: flex;
+      justify-content: center;
+
+      .item {
+        flex: 1;
+        align-content: center;
+
+        .login-box {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

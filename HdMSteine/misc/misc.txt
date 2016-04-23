@@ -9,11 +9,6 @@ this is a place for notes, to do, stuff, whatever
 /////////////////////////////////////////////////
 manus front-end to-dos:
 
-bootstrap einbetten
-animate.css einbetten
-gulp einrichten
-scss einrichten
-angularjs einrichten
 erste view erstellen
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -24,6 +19,3 @@ back-end to-dos:
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-|hi git|
