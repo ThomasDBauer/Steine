@@ -9,16 +9,17 @@ angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers']
         $stateProvider
             .state('app', {
                 url: '/',
-                templateUrl: '../../src/www/index.html',
+                templateUrl: 'huhuhu',
                 controller: 'AppCtrl'
             })
 
-            .state('app.login', {
+            .state('login', {
                 url: '/login',
-                templateUrl: '../../src/www/login.html',
+                template: "<h1>hi!</h1>",
+                //templateUrl: '../../src/www/login.html',
                 controller: 'LoginCtrl'
         });
 
         // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/');
     });
