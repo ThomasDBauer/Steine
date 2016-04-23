@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->String('name');
             $table->String('description');
             $table->Integer('price');
+
             $table->Integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
