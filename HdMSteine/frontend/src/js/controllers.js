@@ -1,4 +1,4 @@
-angular.module('waehrung.controllers', [])
+waehrung.angular.module('waehrung.controllers', [])
     .controller('AppCtrl', function ($scope) {
         $scope.hello = "Hello World from Angular!"
     })
