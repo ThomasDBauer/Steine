@@ -1,4 +1,4 @@
-angular.module('steine', ['ngResource', 'ui.router', 'steine.controllers'])
+angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers'])
 
 .run(function () {
     console.log('hi world')
