@@ -15,7 +15,7 @@ class Post extends Model
     }
 
     public function transactions(){
-        return $this->hasMany(User::class);
+        return $this->hasMany(Transaction::class);
     }
 
     public function offers(){
