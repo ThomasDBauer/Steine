@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/posts', function(){
+Route::get('/post', function(){
     return view('post');
 });
 
