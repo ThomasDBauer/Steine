@@ -54,21 +54,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //for now, V0 is fine:
-        return Response::json(Post::with('tags')->find($id));
-
-       /** V1 works ... almost correctly:
-       $post = DB::table('posts')
-            ->join('tag_posts', 'posts.id', '=', 'post_id')
-            ->get();
-
-        return Response::json($post); */
-
-        /** V2 works ... with some crazy output:
-        $post = Post::with('tags')->find($id);
-        $user = User::where('id', '=', '1')->get();
-        $userPostTag = $post->merge($user);
-        return Response::json($userPostTag); */
+        $userTags = User::with('tags', 'posts', 'messagesReceived')->where('id', '=', $id)->get();
+        return Response::json($userTags);
 
     }
 

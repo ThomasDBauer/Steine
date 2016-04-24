@@ -32,12 +32,12 @@ class User extends Authenticatable
         return $this->hasMany(Transaction::class);
     }
 
-    public function messages(){
-        return $this->hasMany(Message::class);
+    public function messagesReceived(){
+        return $this->hasMany(Message::class, 'receiver_id');
     }
 
     public function tags(){
-        return $this->hasMany(TagPost::class);
+        return $this->hasMany(TagUser::class);
     }
 
 }
