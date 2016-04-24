@@ -22,7 +22,7 @@ class CreateTagUsersTable extends Migration
             $table->Integer('tag_id')->unsigned();
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
 
-            $table->primary('user_id', 'tag_id');
+            $table->primary(['user_id', 'tag_id']);
 
         });
     }
