@@ -13,8 +13,8 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->timestamps();
 
             $table->Integer('post_id')->unsigned();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
