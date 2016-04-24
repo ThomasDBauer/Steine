@@ -25,4 +25,8 @@ class Post extends Model
     public function demands(){
         return $this->hasOne(Demand::class);
     }
+
+    public function tags(){
+        return $this->hasMany(TagPost::class);
+    }
 }

@@ -36,4 +36,8 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
+    public function tags(){
+        return $this->hasMany(TagPost::class);
+    }
+
 }
