@@ -9,14 +9,14 @@ class Message extends Model
 {
 
     protected $fillable = [
-        'message', 'sender_id', 'receiver_id'
+        'message', 'sender_id', 'conversation_id'
     ];
 
     public function sender(){
         return $this->hasOne(User::class);
     }
 
-    public function receiver(){
-        return $this->hasOne(User::class);
+    public function conversation(){
+        return $this->hasOne(Conversation::class);
     }
 }

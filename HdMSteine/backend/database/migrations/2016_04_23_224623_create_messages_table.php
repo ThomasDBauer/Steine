@@ -10,9 +10,12 @@ class CreateMessagesTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
 
             $table->increments('id');
             $table->timestamps();
@@ -20,10 +23,11 @@ class CreateMessagesTable extends Migration
             $table->text('message');
 
             $table->Integer('sender_id')->unsigned();
-            $table->foreign('sender_id')->references('id')->on('users');
+            $table->Integer('conversation_id')->unsigned();
 
-            $table->Integer('receiver_id')->unsigned();
-            $table->foreign('receiver_id')->references('id')->on('users');
+            $table->foreign('sender_id')->references('id')->on('users');
+            $table->foreign('conversation_id')->references('id')->on('conversations');
+
         });
     }
 
