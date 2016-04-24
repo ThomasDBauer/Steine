@@ -11,6 +11,9 @@ class Tag extends Model
         'value'
     ];
 
+
+    public $timestamps = false;
+
     public function users(){
         return $this->hasMany(TagUser::class);
     }

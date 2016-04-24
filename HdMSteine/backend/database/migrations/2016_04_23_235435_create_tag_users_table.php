@@ -14,8 +14,6 @@ class CreateTagUsersTable extends Migration
     {
         Schema::create('tag_users', function (Blueprint $table) {
 
-            $table->timestamps();
-
             $table->Integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
