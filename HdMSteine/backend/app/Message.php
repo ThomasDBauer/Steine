@@ -13,7 +13,7 @@ class Message extends Model
     ];
 
     public function sender(){
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function conversation(){

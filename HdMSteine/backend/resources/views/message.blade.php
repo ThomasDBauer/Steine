@@ -5,14 +5,20 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Your Messages, {{Auth::user()->name}}</div>
+                    <div class="panel-heading">Your Conversations, {{Auth::user()->name}}</div>
 
                     <div class="panel-body">
+                        <?php
+                            echo '<div><table>';
+                            for($i = 0; $i < sizeOf($conversation); $i++){
+                                echo '<tr>';
+                                echo '<td>'.$conversation[$i]->sender->name.':</td>
+                                    <td>'.$conversation[$i]->message.' </td>';
+                                echo '</tr>';
+                            }
+                            echo '</table></div>';
 
-                        @for($i = 0; $i < sizeOf($messages); $i++)
-                            <div>Nachricht {{ $i }}: {{ $messages[$i]}} </div>
-                        @endfor
-
+                        ?>
                     </div>
                 </div>
             </div>

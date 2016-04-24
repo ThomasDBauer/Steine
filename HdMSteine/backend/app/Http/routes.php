@@ -25,7 +25,7 @@ Route::get('/post', function(){
     return view('post');
 });
 
-Route::get('/messages', 'MessageController@showMessages');
+Route::get('/messages', 'ConversationController@conversationTest');
 
 Route::auth();
 
