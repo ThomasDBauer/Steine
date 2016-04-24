@@ -14,6 +14,8 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
 
+            $table->timestamps();
+
             $table->increments('id');
 
             $table->Integer('post_id')->unsigned();

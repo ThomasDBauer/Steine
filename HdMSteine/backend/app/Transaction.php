@@ -10,7 +10,6 @@ class Transaction extends Model
         'post_id', 'partner_id'
     ];
 
-
     public function partners(){
         return $this->belongsTo(User::class);
     }

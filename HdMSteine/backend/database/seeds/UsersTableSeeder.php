@@ -16,9 +16,9 @@ class UsersTableSeeder extends Seeder
         // 'name', 'email', 'password'
 
         DB::table('users')->delete();
-        User::create(['name'=>'Thomas', 'email'=>'t', 'password'=>'123456']);
-        User::create(['name'=>'Manu', 'email'=>'m', 'password'=>'123456']);
-        User::create(['name'=>'Hanna', 'email'=>'h', 'password'=>'123456']);
+        User::create(['name'=>'Thomas', 'email'=>'t@hdm.de', 'password'=>'123456']);
+        User::create(['name'=>'Manu', 'email'=>'m@hdm.de', 'password'=>'123456']);
+        User::create(['name'=>'Hanna', 'email'=>'h@hdm.de', 'password'=>'123456']);
 
     }
 }
