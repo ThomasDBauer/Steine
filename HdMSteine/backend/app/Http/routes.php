@@ -29,8 +29,11 @@ Route::get('/messages', 'MessageController@showMessages');
 
 Route::auth();
 
+//Posts:
 Route::resource('api/post', 'PostController');
+Route::get('api/post/{id}', 'PostController@show');
 
+//Users:
 Route::resource('api/user', 'UserController');
 
 Route::resource('api/message', 'MessageController');
