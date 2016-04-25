@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class UserConversationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-       return User::all();
+        //
     }
 
     /**
@@ -49,8 +48,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::with('conversations')->where('id', '=', $id)->get();
-        //return Response::json($user);
+        //
     }
 
     /**

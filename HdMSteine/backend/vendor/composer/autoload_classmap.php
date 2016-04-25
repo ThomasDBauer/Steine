@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ConversationTableSeeder' => $baseDir . '/database/seeds/ConversationTableSeeder.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2016_04_23_021918_create_comments_table.php',
     'CreateConversationsTable' => $baseDir . '/database/migrations/2015_04_24_111111_create_conversations_table.php',
     'CreateDemandsTable' => $baseDir . '/database/migrations/2016_04_23_012013_create_demands_table.php',
@@ -17,7 +18,7 @@ return array(
     'CreateTagUsersTable' => $baseDir . '/database/migrations/2016_04_23_235435_create_tag_users_table.php',
     'CreateTagsTable' => $baseDir . '/database/migrations/2016_04_23_235009_create_tags_table.php',
     'CreateTransactionsTable' => $baseDir . '/database/migrations/2016_04_23_004345_create_transactions_table.php',
-    'ConversationTableSeeder' => $baseDir . '/database/seeds/ConversationTableSeeder.php',
+    'CreateUserConversationsTable' => $baseDir . '/database/migrations/2016_04_25_073102_create_user_conversations_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
@@ -531,5 +532,6 @@ return array(
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'TransactionsTableSeeder' => $baseDir . '/database/seeds/TransactionsTableSeeder.php',
+    'UserConversationTableSeeder' => $baseDir . '/database/seeds/UserConversationTableSeeder.php',
     'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',
 );

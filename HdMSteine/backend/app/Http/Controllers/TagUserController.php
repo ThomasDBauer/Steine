@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
+use Illuminate\Http\Response;
 
 class TagUserController extends Controller
 {
@@ -16,7 +18,7 @@ class TagUserController extends Controller
      */
     public function index()
     {
-        //
+        return User::all();
     }
 
     /**

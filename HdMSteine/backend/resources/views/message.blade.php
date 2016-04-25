@@ -11,13 +11,10 @@
                         <?php
                             echo '<div><table>';
                             for($i = 0; $i < sizeOf($conversation); $i++){
-                                echo '<tr>';
-                                echo '<td>'.$conversation[$i]->sender->name.':</td>
-                                    <td>'.$conversation[$i]->message.' </td>';
-                                echo '</tr>';
+                                echo '<tr><td>'.$conversation[$i]->sender->name.':</td>
+                                          <td>'.$conversation[$i]->message.' </td></tr>';
                             }
                             echo '</table></div>';
-
                         ?>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversation;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class ConversationController extends Controller
      */
     public function index()
     {
-        //
+        return Conversation::all();
     }
 
     /**
