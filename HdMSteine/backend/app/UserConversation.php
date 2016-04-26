@@ -10,6 +10,8 @@ class UserConversation extends Model
       'user_id', 'conversation_id'
     ];
 
+    public $timestamps = false;
+
     public function users(){
         return $this->hasMany(User::class);
     }
