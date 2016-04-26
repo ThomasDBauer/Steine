@@ -54,7 +54,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $userTags = User::with('tags', 'posts', 'messagesReceived')->where('id', '=', $id)->get();
+        $userTags = User::with('tags', 'posts')->where('id', '=', $id)->get();
         return Response::json($userTags);
 
     }
@@ -84,12 +84,12 @@ class PostController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+*
+* @param  int  $id
+* @return \Illuminate\Http\Response
+*/
     public function destroy($id)
-    {
-        //
-    }
+{
+    //
+}
 }

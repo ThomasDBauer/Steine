@@ -32,7 +32,7 @@ class User extends Authenticatable
         return $this->hasMany(Transaction::class);
     }
 
-    public function conversations(){
+    public function userConversations(){
         return $this->hasMany(UserConversation::class);
     }
 

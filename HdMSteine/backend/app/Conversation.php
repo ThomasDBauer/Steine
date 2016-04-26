@@ -13,7 +13,8 @@ class Conversation extends Model
         return $this->hasMany(Message::class);
     }
 
-    public function users(){
+    public function userConversations(){
         return $this->hasMany(UserConversation::class);
     }
+
 }

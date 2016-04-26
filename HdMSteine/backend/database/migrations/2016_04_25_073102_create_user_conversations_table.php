@@ -13,11 +13,13 @@ class CreateUserConversationsTable extends Migration
     public function up()
     {
         Schema::create('user_conversations', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->Integer('user_id');
+
+            $table->Integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->Integer('conversation_id');
+            $table->Integer('conversation_id')->unsigned();
             $table->foreign('conversation_id')->references('id')->on('conversations')->onDelete('cascade');
         });
     }
