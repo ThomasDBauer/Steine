@@ -42,3 +42,6 @@ Route::resource('api/message', 'MessageController');
 
 //Conversations:
 Route::resource('api/conversation', 'ConversationController');
+
+//Comments:
+Route::resource('api/comment', 'CommentController');
