@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Conversation;
 
 class ConversationController extends Controller
 {
@@ -39,7 +40,7 @@ class ConversationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       Conversation::create($request);
     }
 
     /**
@@ -50,7 +51,7 @@ class ConversationController extends Controller
      */
     public function show($id)
     {
-        //
+        return Conversation::with('messages', 'users')->where('id', '=', $id)->get();
     }
 
     public function conversationTest(){
