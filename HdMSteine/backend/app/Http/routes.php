@@ -36,4 +36,8 @@ Route::get('api/post/{id}', 'PostController@show');
 //Users:
 Route::resource('api/user', 'UserController');
 
+//Messages:
 Route::resource('api/message', 'MessageController');
+
+//Conversations:
+Route::resource('api/conversation', 'ConversationController');
