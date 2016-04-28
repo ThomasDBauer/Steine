@@ -29,4 +29,8 @@ class Post extends Model
     public function tags(){
         return $this->hasMany(TagPost::class);
     }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }
