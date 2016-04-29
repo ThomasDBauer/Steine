@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use Illuminate\Http\Request;
 
 use Response;
@@ -54,8 +55,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $userTags = User::with(Post::with('tags'))->where('id', '=', $id)->get();
-        return Response::json($userTags);
+       return Post::with('tags.tags')->where('id', '=', $id)->get();
 
     }
 
