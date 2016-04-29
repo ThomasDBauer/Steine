@@ -54,7 +54,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $userTags = User::with('tags', 'posts')->where('id', '=', $id)->get();
+        $userTags = User::with(Post::with('tags'))->where('id', '=', $id)->get();
         return Response::json($userTags);
 
     }
