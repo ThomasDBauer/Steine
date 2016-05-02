@@ -23,7 +23,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Post::all();
+        return Post::with('tags')->get();
+        // return Post::all();
     }
 
     /**
