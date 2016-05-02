@@ -9,7 +9,7 @@ angular.module('steine.controllers', [])
         $scope.username = "Elena";
     })
 
-    .controller('OverviewCtrl', function ($scope) {
+    .controller('OverviewCtrl', function ($scope, posts) {
         console.log('controller.js ping');
-        $scope.test = "hey welt";
+        $scope.posts = posts;
     });

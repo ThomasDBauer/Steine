@@ -1,8 +1,7 @@
 angular.module('steine.services', [])
     .factory('PostsService', function ($http, $q) {
-        //return
-        //{
-            //posts: function () {
+        return {
+            posts : function () {
                 var deferred = $q.defer();
 
                 console.log('services.js ping');
@@ -25,6 +24,6 @@ angular.module('steine.services', [])
                         // promise is returned
                         return deferred.promise;
                     });
-            //}
-        //}
+            }
+        }
     });

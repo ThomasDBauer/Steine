@@ -35,7 +35,7 @@ angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers',
                 resolve: {
                     'posts': function (PostsService) {
                         console.log('app.js ping');
-                        return PostsService();
+                        return PostsService.posts();
                     }
                 }
             });
