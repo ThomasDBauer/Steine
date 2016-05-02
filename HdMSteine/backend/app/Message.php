@@ -9,7 +9,7 @@ class Message extends Model
 {
 
     protected $fillable = [
-        'message', 'sender_id', 'conversation_id'
+        'message', 'author_id', 'conversation_id'
     ];
 
     public function sender(){
