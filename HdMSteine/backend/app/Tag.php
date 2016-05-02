@@ -11,10 +11,6 @@ class Tag extends Model
         'value'
     ];
 
-    protected  $hidden = [
-        'id'
-    ];
-
 
     public $timestamps = false;
 

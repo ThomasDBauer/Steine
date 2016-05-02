@@ -49,7 +49,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return User::with('posts.tags.tags')->where('id', '=', $id)->get();
+        return User::with('posts.tags')->where('id', '=', $id)->get();
+        //return Response::json($user);
     }
 
     /**
