@@ -7,15 +7,27 @@ this is a place for notes, to do, stuff, whatever
 #################################################
 
 /////////////////////////////////////////////////
-manus front-end to-dos:
 
-erste view erstellen
+manus front-end:
+
+eine kurze anleitung:
+
+um das ganze in betrieb zu nehmen, einfach
+
+$ gulp clean
+$ gulp build
+
+in der cmd laufen lassen
+
+## dadurch wird ein dist(ribution) verzeichnis
+## erstellt, welches zur produktion verwendet
+## werden kann
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 /////////////////////////////////////////////////
 back-end to-dos:
 
-.gitignore anpassen
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
