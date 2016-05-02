@@ -10,12 +10,20 @@ class TagUser extends Model
     public $timestamps = false;
 
     protected $fillable = [
-    'tag_id',
-    'user_id'
+
+    ];
+
+    protected $hidden = [
+        'tag_id',
+        'user_id'
     ];
 
 
-    public function posts(){
-        return $this->hasMany(User::class);
+    public function users(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function tags(){
+        return $this->belongsTo(Tag::class, 'id');
     }
 }

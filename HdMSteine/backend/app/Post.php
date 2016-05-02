@@ -10,6 +10,10 @@ class Post extends Model
         'name', 'description', 'price', 'user_id', 'status'
     ];
 
+    protected $hidden = [
+        'updated_at'
+    ];
+
     public function users(){
         return $this->belongsTo(User::class);
     }
