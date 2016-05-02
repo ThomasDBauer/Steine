@@ -1,16 +1,21 @@
 angular.module('steine.services', [])
     .factory('PostsService', function ($http, $q) {
-        return {
-            posts: function () {
+        //return
+        //{
+            //posts: function () {
                 var deferred = $q.defer();
+
+                console.log('services.js ping');
 
                 // be careful here! just test routes
                 // TODO: after production, remove test
 
-                return $http.get('http://localhost/steine/Steine/HdMSteine/backend/public/post')
+                return $http.get('http://localhost/steine/Steine/HdMSteine/backend/public/api/post')
                     .then(function (response) {
                         // promise is fulfilled
-                        deferred.resolve(response);
+                        deferred.resolve(response.data);
+                        console.log('services.js promise success ping');
+                        console.log(response.data);
                         // promise is returned
                         return deferred.promise;
 
@@ -20,6 +25,6 @@ angular.module('steine.services', [])
                         // promise is returned
                         return deferred.promise;
                     });
-            }
-        }
+            //}
+        //}
     });

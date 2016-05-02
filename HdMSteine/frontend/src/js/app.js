@@ -28,16 +28,17 @@ angular.module('steine', ['ng', 'ngResource', 'ui.router', 'steine.controllers',
                 // TODO: add resolve for api
             })
 
-        .state('overview', {
-            url: '/overview',
-            templateUrl: '../../src/www/overview.html',
-            controller: 'OverviewCtrl',
-            resolve: {
-                'posts': function (PostsService) {
-                    return PostsService()
+            .state('overview', {
+                url: '/overview',
+                templateUrl: '../../src/www/overview.html',
+                controller: 'OverviewCtrl',
+                resolve: {
+                    'posts': function (PostsService) {
+                        console.log('app.js ping');
+                        return PostsService();
+                    }
                 }
-            }
-        });
+            });
 
         // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
